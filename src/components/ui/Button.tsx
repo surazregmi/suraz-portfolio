@@ -1,17 +1,15 @@
-import type { ReactNode } from 'react'
-
-type ButtonProps = {
-  children: ReactNode
-  onClick?: () => void
+// src/components/Button.tsx
+interface Props {
+  type: "green" | "dark";
+  label: string;
 }
 
-export default function Button({ children, onClick }: ButtonProps) {
-  return (
-    <button
-      onClick={onClick}
-      className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 transition"
-    >
-      {children}
-    </button>
-  )
+export default function Button({ type, label }: Props) {
+  const base =
+    "px-4 py-2 rounded text-sm font-semibold flex items-center gap-2";
+  const styles = {
+    green: `${base} bg-green-500 text-white hover:bg-green-600`,
+    dark: `${base} bg-gray-800 text-white hover:bg-gray-900`,
+  };
+  return <button className={styles[type]}>{label}</button>;
 }
