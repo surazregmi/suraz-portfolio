@@ -2,6 +2,7 @@
 import Sidebar from "@/components/ui/Sidebar";
 import { Outlet } from "react-router-dom";
 import { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Layout() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -13,26 +14,31 @@ export default function Layout() {
         <Sidebar />
       </div>
 
-      {/* Sidebar overlay for mobile */}
       {sidebarOpen && (
         <div className="md:hidden fixed inset-0 z-40 flex">
-          <div className="relative z-50">
+          {/* Sidebar content with close icon */}
+          <div className="relative z-50 bg-green-600 h-full w-72 shadow-lg text-white">
+            <div className="flex justify-end p-4">
+              <button
+                onClick={() => setSidebarOpen(false)}
+                className="text-white text-2xl"
+              >
+                <FaTimes />
+              </button>
+            </div>
             <Sidebar />
           </div>
-          <div
-            className="fixed inset-0 bg-black opacity-50"
-            onClick={() => setSidebarOpen(false)}
-          />
+          {/* Background overlay removed since we're using a close button */}
         </div>
       )}
 
       {/* Main Content Area */}
-      <div className="flex-1 bg-gray-100 p-4 overflow-y-auto">
+      <div className="flex-1 bg-gray-800 p-4 overflow-y-auto text-white">
         <button
-          className="md:hidden mb-4 px-4 py-2 bg-blue-600 text-white rounded"
+          className="md:hidden mb-4 px-4 py-2 bg-green-600 text-white rounded"
           onClick={() => setSidebarOpen(true)}
         >
-          Open Sidebar
+          <FaBars />
         </button>
         {/* Route content will be injected here */}
         <div className="px-8 py-6">

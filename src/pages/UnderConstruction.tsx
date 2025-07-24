@@ -1,5 +1,7 @@
 // src/components/UnderConstruction.tsx
+import Button from "@/components/ui/Button";
 import { FaTools } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 interface UnderConstructionProps {
   pageName: string;
@@ -21,12 +23,9 @@ export default function UnderConstruction({
         {pageName} page will be back soon. Stay tuned!
       </p>
 
-      <a
-        href="/"
-        className="inline-block px-6 py-3 bg-green-500 text-green-900 font-semibold rounded-md shadow-md hover:bg-green-600 transition"
-      >
-        Go Back Home
-      </a>
+      <Link to="/resume">
+        <Button type="green" label="Back To Home Page" />
+      </Link>
     </div>
   );
 }
