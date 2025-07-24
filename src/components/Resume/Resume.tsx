@@ -6,97 +6,165 @@ const Resume = () => {
   return (
     <div className="max-w-3xl mx-auto bg-white p-8 shadow-lg print:shadow-none print:p-0">
       <ResumeHeader
-        name="Suraj Regmi"
+        name="Suraj Kumar Regmi"
         title="Full Stack Software Engineer"
         contact={{
           email: "link2surajregmi@gmail.com",
-          phone: "+61 0423248465",
-          location: "Australia",
-          website: "surajregmi.dev",
+          phone: "+61 0423 248 465",
+          location: "Sydney, Australia",
+          website: "linkedin.com/in/surajregmi",
         }}
       />
 
       <ResumeSection title="Professional Summary">
         <p className="text-sm text-gray-700">
-          Passionate full-stack engineer with 4+ years of experience building
-          scalable web applications using Angular, React, .NET, and Node.js.
-          Strong in frontend architecture, backend services, and cloud
-          deployment.
+          Results-driven Software Engineer with 4+ years of experience building
+          scalable web applications and backend services using Node.js, React,
+          and .NET. Proven ability to design and implement modular, maintainable
+          systems across both frontend and backend. Experienced in RESTful APIs,
+          PostgreSQL, MongoDB, and CI/CD workflows. Currently exploring Go and
+          Next.js for advanced backend capabilities. Passionate about clean
+          code, SOLID principles, and delivering impactful software solutions.
         </p>
       </ResumeSection>
 
-      <ResumeSection title="Experience">
+      <ResumeSection title="Technical Skills">
+        <ul className="grid grid-cols-2 text-sm text-gray-700 list-disc pl-5 gap-1">
+          <li>Node.js, React, Angular, .NET, Go, Next.js</li>
+          <li>Web Components, LitElement</li>
+          <li>MongoDB, MySQL, Firebase</li>
+          <li>Git, Jira, Postman, VS Code, IntelliJ</li>
+          <li>Linux, Windows, macOS</li>
+        </ul>
+      </ResumeSection>
+
+      <ResumeSection title="Work Experience">
         <div className="mb-4">
-          <h3 className="font-semibold">Software Engineer – ABC Corp</h3>
+          <h3 className="font-semibold">
+            Software Engineer – Ozdocs International (Infotrak Global)
+          </h3>
           <p className="text-sm text-gray-600 italic">
-            Jan 2022 – Present | Sydney
+            June 2024 – Present | Sydney, NSW
           </p>
           <ul className="list-disc pl-5 text-sm text-gray-700 mt-1">
             <li>
-              Built and maintained enterprise-grade Angular/.NET applications.
+              Developed Oil Commander LIMS for oil condition monitoring and
+              fleet maintenance.
             </li>
             <li>
-              Led frontend migration to React for improved performance and
-              maintainability.
+              Built frontend with React including sample forms, dashboards, and
+              reports.
             </li>
             <li>
-              Worked closely with QA and DevOps for CI/CD and testing pipelines.
+              Created backend APIs using Node.js and Express to manage lab
+              workflows.
+            </li>
+            <li>
+              Implemented background services for high-volume report generation.
+            </li>
+            <li>
+              Contributed to Agile practices: sprint planning, daily standups,
+              code reviews.
             </li>
           </ul>
         </div>
+
         <div className="mb-4">
-          <h3 className="font-semibold">Software Engineer – ABC Corp</h3>
+          <h3 className="font-semibold">
+            Software Engineer – Leapfrog Technology
+          </h3>
           <p className="text-sm text-gray-600 italic">
-            Jan 2022 – Present | Sydney
+            Jan 2021 – Jan 2023 | Kathmandu, Nepal
           </p>
           <ul className="list-disc pl-5 text-sm text-gray-700 mt-1">
             <li>
-              Built and maintained enterprise-grade Angular/.NET applications.
+              Built custom frontend using LitElement and Storybook for Nurix
+              Therapeutics.
             </li>
             <li>
-              Led frontend migration to React for improved performance and
-              maintainability.
+              Developed backend services in Java using Micronaut + Hibernate
+              ORM.
             </li>
+            <li>Deployed systems on AWS for Dev/UAT/Prod environments.</li>
+            <li>Created VS Code Extension to automate repetitive tasks.</li>
             <li>
-              Worked closely with QA and DevOps for CI/CD and testing pipelines.
+              Reviewed PRs and mentored junior developers in KSS sessions.
             </li>
           </ul>
         </div>
+
         <div className="mb-4">
-          <h3 className="font-semibold">Software Engineer – ABC Corp</h3>
+          <h3 className="font-semibold">
+            Angular Developer – Bentray Technologies
+          </h3>
           <p className="text-sm text-gray-600 italic">
-            Jan 2022 – Present | Sydney
+            June 2019 – Dec 2021 | Lalitpur, Nepal
           </p>
           <ul className="list-disc pl-5 text-sm text-gray-700 mt-1">
             <li>
-              Built and maintained enterprise-grade Angular/.NET applications.
+              Developed HR system using Angular 6+ with dynamic forms and
+              validations.
             </li>
             <li>
-              Led frontend migration to React for improved performance and
-              maintainability.
+              Integrated Kendo UI, AGM Maps, and built custom Nepali
+              date-picker.
             </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="font-semibold">
+            Software Engineering Intern – Asterdio
+          </h3>
+          <p className="text-sm text-gray-600 italic">
+            Jan 2019 – June 2019 | Kathmandu, Nepal
+          </p>
+          <ul className="list-disc pl-5 text-sm text-gray-700 mt-1">
+            <li>Built REST APIs using Node.js/Express.</li>
             <li>
-              Worked closely with QA and DevOps for CI/CD and testing pipelines.
+              Learned CI/CD practices and worked with SQL/NoSQL databases.
             </li>
           </ul>
         </div>
       </ResumeSection>
 
       <ResumeSection title="Education">
+        <p className="text-sm text-gray-700 mb-2">
+          🎓{" "}
+          <strong>
+            Masters in Information Technology – Software Development
+          </strong>
+          <br />
+          UTS, Australia | Kings Own Institute (2023–2025)
+        </p>
         <p className="text-sm text-gray-700">
-          🎓 Bachelor of Computer Science – XYZ University (2017–2021)
+          🎓 <strong>Bachelor in Computer Engineering</strong>
+          <br />
+          Kantipur Engineering College, Nepal (2014–2018)
         </p>
       </ResumeSection>
 
-      <ResumeSection title="Skills">
-        <ul className="text-sm text-gray-700 grid grid-cols-2 gap-2">
-          <li>✔ Angular / React / Vue</li>
-          <li>✔ .NET Core / Node.js</li>
-          <li>✔ SQL / MongoDB</li>
-          <li>✔ Azure / AWS</li>
-          <li>✔ Git / GitHub Actions</li>
-          <li>✔ Docker / CI/CD</li>
+      <ResumeSection title="Client Projects">
+        <ul className="list-disc pl-5 text-sm text-gray-700">
+          <li>Oil Commander – LIMS for oil monitoring & fleet maintenance.</li>
+          <li>
+            Delphi – Drug discovery platform for a US biotech firm (Leapfrog).
+          </li>
+          <li>Online MCQ System – Angular-based SaaS exam portal (Bentray).</li>
+          <li>FlexYear HR – Angular-based HR & payroll software (Bentray).</li>
         </ul>
+      </ResumeSection>
+
+      <ResumeSection title="Trainings">
+        <ul className="list-disc pl-5 text-sm text-gray-700">
+          <li>Data Structures & Algorithms in Java – Udemy</li>
+          <li>Git Workflow & Communication – Leapfrog</li>
+          <li>Drug Discovery Domain Training – Leapfrog</li>
+        </ul>
+      </ResumeSection>
+
+      <ResumeSection title="Referees">
+        <p className="text-sm text-gray-700">Available upon request.</p>
       </ResumeSection>
     </div>
   );

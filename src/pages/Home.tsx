@@ -1,18 +1,17 @@
 // src/pages/Home.tsx
-import Sidebar from "../components/ui/Sidebar";
+
 import Button from "../components/ui/Button";
 
-import { useState } from "react";
 import { Link } from "react-router-dom";
 export default function Home() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <div className="main-content ">
       <h1 className="text-4xl font-bold ">Suraj Regmi</h1>
       <p className="text-xl text-gray-600">Software Engineer</p>
       <p className="text-gray-700 mt-4">
-        I'm a software engineer specialised in frontend and backend development
-        for complex scalable web apps.
+        I'm a software engineer specialised in both frontend and backend
+        technologies. I create scalable and efficient web applications using
+        modern technologies.
       </p>
       <div className="flex flex-wrap gap-4 mt-6">
         <Button type="green" label="View Portfolio" />
