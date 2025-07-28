@@ -1,5 +1,3 @@
-// src/pages/Home.tsx
-
 import Button from "../components/ui/Button";
 import profilePic from "../assets/profile-pic.png";
 
