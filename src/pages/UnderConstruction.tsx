@@ -1,6 +1,6 @@
 // src/components/UnderConstruction.tsx
 import Button from "@/components/ui/Button";
-import { FaTools } from "react-icons/fa";
+import { FaArrowCircleLeft, FaTools } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 interface UnderConstructionProps {
@@ -11,7 +11,7 @@ export default function UnderConstruction({
   pageName,
 }: UnderConstructionProps) {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-4 bg-gray-100 text-gray-500">
+    <div className="flex flex-col items-center justify-center min-h-screen px-4  text-gray-500">
       <div className="animate-bounce mb-8 rounded-full bg-green-400 p-6 shadow-lg">
         <FaTools className="w-16 h-16" />
       </div>
@@ -24,7 +24,7 @@ export default function UnderConstruction({
       </p>
 
       <Link to="/resume">
-        <Button type="green" label="Back To Home Page" />
+        <Button type="green" label="Back To Home Page" icon={<FaArrowCircleLeft />} />
       </Link>
     </div>
   );

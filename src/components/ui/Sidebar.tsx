@@ -8,6 +8,7 @@ import {
   FaFileAlt,
   FaBlog,
   FaEnvelope,
+  
 } from "react-icons/fa";
 import profilePic from "../../assets/profile-pic.png";
 
@@ -15,7 +16,6 @@ const navLinks = [
   { label: "About Me", icon: FaUser, path: "/" },
   { label: "Skills", icon: FaBriefcase, path: "/skills" },
   { label: "Projects", icon: FaTags, path: "/projects" },
-  { label: "Resume", icon: FaFileAlt, path: "/resume" },
   { label: "Blog", icon: FaBlog, path: "/blog" },
   { label: "Contact", icon: FaEnvelope, path: "/contact" },
 ];
@@ -35,7 +35,7 @@ const socialLinks = [
 
 const Sidebar = () => {
   return (
-    <aside className="relative bg-gray-900 text-white w-72 h-full p-6 overflow-hidden">
+    <aside className="relative bg-[#54b689] text-[#ffffffcc] w-72 h-full p-6 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 opacity-10 animate-moveCode z-0 whitespace-pre-wrap text-green-400 text-xs font-mono pointer-events-none px-4 leading-5">
         {"const greet = 'Hello, Suraj!';\nconsole.log(greet);\n".repeat(50)}

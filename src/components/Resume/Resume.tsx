@@ -4,7 +4,7 @@ import ResumeSection from "./ResumeSection";
 
 const Resume = () => {
   return (
-    <div className="max-w-3xl mx-auto bg-white p-8 shadow-lg print:shadow-none print:p-0">
+    <div className="max-w-4xl mx-auto bg-white p-8 shadow-lg print:shadow-none print:p-0">
       <ResumeHeader
         name="Suraj Kumar Regmi"
         title="Full Stack Software Engineer"

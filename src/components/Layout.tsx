@@ -33,7 +33,7 @@ export default function Layout() {
       )}
 
       {/* Main Content Area */}
-      <div className="flex-1 bg-gray-800 p-4 overflow-y-auto text-white">
+      <div className="flex-1 bg-white p-4 overflow-y-auto text-[#4f4f4f]">
         <button
           className="md:hidden mb-4 px-4 py-2 bg-green-600 text-white rounded"
           onClick={() => setSidebarOpen(true)}

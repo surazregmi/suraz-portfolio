@@ -6,6 +6,7 @@ import Skills from "@/pages/Skills";
 import NotFound from "@/pages/NotFound";
 import ResumePage from "@/pages/ResumePage";
 import Blogs from "@/pages/Blogs";
+import HomePage from "@/pages/HomePage";
 
 export default function AppRoutes() {
   return (
@@ -15,7 +16,6 @@ export default function AppRoutes() {
           <Route index element={<Home />} />
           <Route path="skills" element={<Skills />} />
           <Route path="projects" element={<Projects />} />
-          <Route path="resume" element={<ResumePage />} />
           <Route path="blog" element={<Blogs />} />
           <Route path="*" element={<NotFound />} />
         </Route>
