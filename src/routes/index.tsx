@@ -4,9 +4,7 @@ import Layout from "@/components/Layout";
 import Projects from "@/pages/Projects";
 import Skills from "@/pages/Skills";
 import NotFound from "@/pages/NotFound";
-import ResumePage from "@/pages/ResumePage";
 import Blogs from "@/pages/Blogs";
-import HomePage from "@/pages/HomePage";
 
 export default function AppRoutes() {
   return (

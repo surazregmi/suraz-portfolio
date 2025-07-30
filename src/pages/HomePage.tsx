@@ -714,7 +714,7 @@ const HomePage = () => {
             </div>
             <div className="border-t border-gray-700/50 pt-6">
               <p className="text-gray-400 text-sm md:text-base">
-                © 2025 Suraj Kumar Regmi. Built with React & Tailwind CSS.
+                © 2025 Suraj Kumar Regmi.
               </p>
             </div>
           </div>
