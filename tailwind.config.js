@@ -15,6 +15,11 @@ export default {
           "100%": { transform: "translateY(-100%)" },
         },
       },
+      colors: {
+        primary: "#00FFB3",
+        secondary: "#FF00D4",
+        dark: "#0F172A",
+      },
     },
   },
   plugins: [],

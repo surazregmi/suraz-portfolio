@@ -5,8 +5,25 @@ import { FaArrowAltCircleRight } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
 import { AngularIcon, ReactIcon } from "@/components/icons";
-import { Code, Database, Server, Terminal } from "lucide-react";
+import {
+  ChevronDown,
+  Code,
+  Database,
+  MapPin,
+  Phone,
+  Server,
+  Terminal,
+  Zap,
+} from "lucide-react";
+import { useState } from "react";
+import Skills from "./Skills";
+import Experiances from "./Experiances";
+import Projects from "./Projects";
+import Education from "./Education";
 export default function Home() {
+  const [activeSection, setActiveSection] = useState("home");
+  const [isVisible, setIsVisible] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const skills = {
     Frontend: [
       "React",
@@ -29,121 +46,156 @@ export default function Home() {
   };
 
   return (
-    <div className="main-content ">
-      <h1 className="text-4xl font-bold ">Suraj Regmi</h1>
-      <p className="text-2xl font-light text-gray-600">Software Engineer</p>
-      <p className="mt-4 font-normal">
-        I'm Suraj Regmi, a full-stack software engineer with over 4 years of
-        experience building scalable web applications and backend services using
-        technologies like React, Node.js, and .NET. I specialize in designing
-        clean, modular, and maintainable systems, and I’m passionate about
-        delivering impactful solutions that align with business goals. With
-        hands-on experience across frontend, backend, and cloud environments, I
-        bring a balanced and thoughtful approach to modern software development.
-      </p>
-      <div className="flex flex-wrap gap-4 mt-6">
-        <Link to="/projects">
-          <Button
-            type="green"
-            label="View Portfolio"
-            icon={<FaArrowAltCircleRight />}
-          />
-        </Link>
+    <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
+      <section id="hero-section">
+        {/* Dynamic cursor effect */}
+        <div
+          className="fixed pointer-events-none z-0 w-96 h-96 rounded-full opacity-20 blur-3xl transition-all duration-300"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(59,130,246,0.5) 0%, rgba(147,51,234,0.3) 50%, transparent 100%)",
+          }}
+        />
 
-        <Link to="/resume">
-          <Button
-            type="dark"
-            label="View Resume"
-            icon={<FaArrowAltCircleRight />}
-          />
-        </Link>
-      </div>
+        {/* Animated background grid */}
+        <div className="absolute inset-0 opacity-10">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `radial-gradient(circle at 1px 1px, rgba(59,130,246,0.3) 1px, transparent 0)`,
+              backgroundSize: "40px 40px",
+            }}
+          ></div>
+        </div>
 
-      <hr className="my-8" />
+        {/* Floating elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+          <div className="absolute top-40 right-32 w-1 h-1 bg-purple-400 rounded-full animate-ping"></div>
+          <div className="absolute bottom-32 left-1/4 w-3 h-3 bg-pink-400 rounded-full animate-bounce"></div>
+          <div className="absolute top-1/3 right-20 w-2 h-2 bg-green-400 rounded-full animate-pulse delay-1000"></div>
 
-      <h2 className="text-3xl font-bold">What I do</h2>
-      <p className="mt-2">
-        I have more than 4 years' experience building software for clients all
-        over the world. Below is a quick overview of my main technical skill
-        sets and technologies I use.
-      </p>
+          {/* Animated geometric shapes */}
+          <div className="absolute top-32 right-1/4 w-20 h-20 border border-cyan-400/20 rounded-full animate-spin-slow"></div>
+          <div className="absolute bottom-40 right-32 w-16 h-16 border border-purple-400/20 rotate-45 animate-pulse"></div>
+        </div>
 
-      {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
-        {[
-          { title: "Frontend" ,description:"Angular | React | Typescript | Tailwind | HTML5 CSS3", icon:<AngularIcon/>},
-          { title: "Backend", description:"Node.js | Java | .Net", icon:<ReactIcon/> },
-          { title: "Cloud",description:"AWS | Terraform | Docker | CI CD", icon:<ReactIcon/>  },
-          { title: "Tools and platform",description:"GIT | Jira | Postman | VS Code ", icon:<ReactIcon/>  },
-        ].map(({ title ,description,icon}, i) => (
-          <div key={i} className="space-y-2">
-            <h3 className="font-semibold">{title}</h3>
-            <p className="text-sm text-gray-500">
-              {description}
-            </p>
-          </div>
-        ))}
-      </div> */}
+        <div className={`text-center z-10 transition-all duration-1000 px-4}`}>
+          <div className="mb-8">
+            {/* Welcome message */}
+            <div className="relative mb-8">
+              <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-green-400 to-cyan-500 bg-clip-text text-transparent mb-2">
+                &lt; Welcome to my digital space /&gt;
+              </p>
+              <p className="text-lg md:text-xl text-gray-300 font-mono">
+                Building the future, one commit at a time
+              </p>
+            </div>
 
-      <section className="py-20 px-4 md:px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-black mb-4">
-              <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 bg-clip-text text-transparent">
-                Skills & Expertise
+            {/* Main title */}
+            <h1 className="text-4xl md:text-6xl lg:text-8xl font-black mb-6 relative">
+              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent animate-pulse">
+                Full Stack
               </span>
-            </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Technologies and tools that power my development journey
+              <br />
+              <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent animate-pulse delay-500">
+                Developer
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent blur-sm opacity-50 -z-10">
+                Full Stack Developer
+              </div>
+            </h1>
+
+            {/* Contact info with neon effect */}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-gray-300 mb-12">
+              <div className="flex items-center gap-2 px-4 py-2 bg-gray-800/50 rounded-full border border-cyan-500/30 backdrop-blur-sm">
+                <MapPin className="w-4 h-4 text-cyan-400" />
+                <span className="text-cyan-300">Sydney, Australia</span>
+              </div>
+              <div className="flex items-center gap-2 px-4 py-2 bg-gray-800/50 rounded-full border border-purple-500/30 backdrop-blur-sm">
+                <Phone className="w-4 h-4 text-purple-400" />
+                <span className="text-purple-300">+61 0423248465</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Glowing description */}
+          <div className="relative mb-12">
+            <p className="text-base md:text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed backdrop-blur-sm bg-gray-900/30 p-6 rounded-2xl border border-gray-700/50">
+              <span className="text-cyan-400 font-semibold">
+                Results-driven Software Engineer
+              </span>{" "}
+              with
+              <span className="text-purple-400 font-semibold">
+                {" "}
+                4+ years
+              </span>{" "}
+              of experience building
+              <span className="text-green-400 font-semibold">
+                {" "}
+                scalable web applications
+              </span>{" "}
+              and backend services using
+              <span className="text-yellow-400 font-semibold">
+                Node.js, React, and .Net
+              </span>
+              . Passionate about{" "}
+              <span className="text-pink-400 font-semibold">clean code</span>,
+              <span className="text-blue-400 font-semibold">
+                SOLID principles
+              </span>
+              , and delivering
+              <span className="text-red-400 font-semibold">
+                impactful software solutions
+              </span>
+              .
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            {Object.entries(skills).map(([category, skillList], index) => (
-              <div
-                key={category}
-                className="group relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 overflow-hidden"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          {/* Neon buttons */}
+          <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
+            <button
+              onClick={() => setActiveSection("projects")}
+              className="relative px-6 md:px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full font-semibold overflow-hidden group transition-all duration-300 transform hover:scale-105"
+            >
+              <span className="relative z-10 flex items-center justify-center gap-2">
+                <Code className="w-5 h-5" />
+                View Projects
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 blur-xl opacity-50"></div>
+            </button>
+            <button
+              onClick={() => setActiveSection("skills")}
+              className="relative px-6 md:px-8 py-4 border-2 border-purple-500 text-purple-400 rounded-full font-semibold overflow-hidden group transition-all duration-300 hover:text-white"
+            >
+              <span className="relative z-10 flex items-center justify-center gap-2">
+                <Zap className="w-5 h-5" />
+                My Skills
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+            </button>
+          </div>
 
-                <div className="relative z-10">
-                  <div className="flex items-center gap-4 mb-8">
-                    <div className="p-4 bg-gray-800/70 rounded-xl border border-gray-600/50">
-                      {category === "Frontend" && (
-                        <Code className="w-8 h-8 text-cyan-400" />
-                      )}
-                      {category === "Backend" && (
-                        <Server className="w-8 h-8 text-emerald-400" />
-                      )}
-                      {category === "Database" && (
-                        <Database className="w-8 h-8 text-purple-400" />
-                      )}
-                      {category === "Tools & Others" && (
-                        <Terminal className="w-8 h-8 text-orange-400" />
-                      )}
-                    </div>
-                    <h3 className="text-2xl font-bold text-white">
-                      {category}
-                    </h3>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-3">
-                    {skillList.map((skill, skillIndex) => (
-                      <div
-                        key={skillIndex}
-                        className="flex items-center gap-3 p-3 bg-gray-800/50 rounded-lg border border-gray-600/30 hover:border-cyan-500/50 hover:bg-gray-700/50 transition-all duration-300"
-                      >
-                        <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
-                        <span className="text-gray-300 text-sm font-medium">
-                          {skill}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
+          <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <ChevronDown className="w-8 h-8 text-cyan-400" />
           </div>
         </div>
+      </section>
+      <section id="skills">
+        <Skills />
+      </section>
+
+      <section id="experiance">
+        <Experiances />
+      </section>
+
+      <section id="projects">
+        <Projects />
+      </section>
+
+      <section id="education">
+        <Education />
       </section>
     </div>
   );
