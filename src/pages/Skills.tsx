@@ -2,18 +2,33 @@ import { Code, Database, Server, Smartphone } from "lucide-react";
 
 export default function Skills() {
   const skills = {
-    "Programming Languages": [
+    Frontend: ["React", "Typescript", "Angular", "Web Components", "Next.js"],
+    Backend: [
       "Node.js",
-      "React",
-      "Go",
-      "Web Components",
-      "Angular",
-      ".Net",
-      "Next.js",
+      "Express",
+      "Prisma ORM",
+      "REST APIs",
+      "Microservices",
+      "AWS",
+      "SQS(Message Queues)",
+      ".net C#",
     ],
-    Databases: ["MySQL", "NoSQL (MongoDB)", "Firebase"],
-    Tools: ["Git", "Jira", "VS Code", "IntelliJ", "Postman"],
+    Databases: [
+      "MySQL",
+      "Firebase",
+      "PostgreSQL (Supabase)",
+      "MongoDB",
+      "PGVector",
+    ],
+    Tools: ["Git", "Jira", "VS Code", "IntelliJ", "Postman", "CI/CD"],
     Platforms: ["Linux", "Windows", "MacOS"],
+    "AI Technologies": [
+      "OpenAI API",
+      "LangChain",
+      "RAG Pipelines",
+      "Vector Search",
+      "Embeddings",
+    ],
   };
 
   return (
@@ -40,8 +55,11 @@ export default function Skills() {
               <div className="relative z-10">
                 <div className="flex items-center gap-4 mb-6 md:mb-8">
                   <div className="p-3 bg-gray-800/70 rounded-xl border border-gray-600/50">
-                    {category === "Programming Languages" && (
+                    {category === "Frontend" && (
                       <Code className="w-6 md:w-8 h-6 md:h-8 text-cyan-400" />
+                    )}
+                    {category === "Backend" && (
+                      <Database className="w-6 md:w-8 h-6 md:h-8 text-green-400" />
                     )}
                     {category === "Databases" && (
                       <Database className="w-6 md:w-8 h-6 md:h-8 text-green-400" />
@@ -50,6 +68,10 @@ export default function Skills() {
                       <Server className="w-6 md:w-8 h-6 md:h-8 text-purple-400" />
                     )}
                     {category === "Platforms" && (
+                      <Smartphone className="w-6 md:w-8 h-6 md:h-8 text-orange-400" />
+                    )}
+
+                    {category === "AI Technologies" && (
                       <Smartphone className="w-6 md:w-8 h-6 md:h-8 text-orange-400" />
                     )}
                   </div>

@@ -5,10 +5,8 @@ import {
   FaUser,
   FaBriefcase,
   FaTags,
-  FaFileAlt,
   FaBlog,
   FaEnvelope,
-  
 } from "react-icons/fa";
 import profilePic from "../../assets/profile-pic.png";
 

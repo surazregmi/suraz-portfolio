@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   ChevronDown,
   Github,
@@ -11,15 +11,12 @@ import {
   Database,
   Server,
   Smartphone,
-  Calendar,
-  Users,
   Award,
   Terminal,
   Zap,
   Menu,
   X,
   Home,
-  User,
   Briefcase,
   BookOpen,
 } from "lucide-react";

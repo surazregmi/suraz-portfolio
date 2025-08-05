@@ -1,6 +1,20 @@
 export default function Experiances() {
   const experiences = [
     {
+      title: "AI powered Project Management Tool(Cognify Ops)",
+      company: "Capstone Project - Kings own Institute",
+      period: "June 2024 - June 2025",
+      location: "Sydney, NSW",
+      highlights: [
+        "Built the backend with Node.js, Express, Prisma ORM, and Supabase (PostgreSQL + PGVector)",
+        "Developed a microservice architecture for AI services handling chunking, embedding generation (OpenAI), and vector search (PGVector).",
+        "Designed RAG (Retrieval Augmented Generation) pipelines to improve information accuracy and context-aware search.",
+        "Integrated LangChain to manage AI workflow orchestration and tool usage.",
+        "Developed frontend in React &amp; TypeScript featuring a Kanban board with drag-and-drop functionality.",
+        "Planned integration of AWS SQS for asynchronous processing between services.",
+      ],
+    },
+    {
       title: "Software Engineer",
       company: "Ozdocs International (Infotrak Global)",
       period: "June 2024 - Present",
@@ -34,6 +48,18 @@ export default function Experiances() {
         "Integrated Kendo UI components with advanced filtering",
         "Implemented AGM Maps for geo-location features",
         "Developed localized Nepali date-picker component",
+      ],
+    },
+
+    {
+      title: "Software Engineer Intern",
+      company: "Asterdio",
+      period: "Jan 2019 - June 2019",
+      location: "Lalitpur, Nepal",
+      highlights: [
+        "Developed REST APIs using Node.js and Express.",
+        "Worked on SQL and NoSQL databases (MySQL, MongoDB).",
+        "Learned CI/CD pipelines and participated in deployment processes.",
       ],
     },
   ];

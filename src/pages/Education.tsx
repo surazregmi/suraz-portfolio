@@ -14,24 +14,27 @@ export default function Education() {
                 Masters in Information Technology
               </h4>
               <p className="text-purple-400 font-medium mb-2">
-                Software Development
+                AI Powered Software Development
               </p>
               <p className="text-gray-300 mb-2 text-sm md:text-base">
                 University of Technology Sydney (UTS)
               </p>
               <p className="text-gray-400 text-sm md:text-base">
-                July 2023 - June 2025
+                July 2023 - June 2025 | Sydney NSW
               </p>
             </div>
             <div className="p-4 md:p-6 bg-gray-800/50 rounded-xl border border-gray-700/50">
               <h4 className="text-lg md:text-xl font-semibold mb-3 text-cyan-300">
                 Bachelors in Computer Engineering
               </h4>
+              <p className="text-purple-400 font-medium mb-2">
+                Software Development
+              </p>
               <p className="text-gray-300 mb-2 text-sm md:text-base">
                 Kantipur Engineering College
               </p>
               <p className="text-gray-400 text-sm md:text-base">
-                January 2014 - January 2018
+                January 2014 - January 2018 | Kathmandu Nepal
               </p>
             </div>
           </div>

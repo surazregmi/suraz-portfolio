@@ -1,50 +1,12 @@
-import Button from "../components/ui/Button";
-import profilePic from "../assets/profile-pic.png";
+import { ChevronDown, Code, MapPin, Phone, Zap } from "lucide-react";
 
-import { FaArrowAltCircleRight } from "react-icons/fa";
-
-import { Link } from "react-router-dom";
-import { AngularIcon, ReactIcon } from "@/components/icons";
-import {
-  ChevronDown,
-  Code,
-  Database,
-  MapPin,
-  Phone,
-  Server,
-  Terminal,
-  Zap,
-} from "lucide-react";
-import { useState } from "react";
 import Skills from "./Skills";
 import Experiances from "./Experiances";
 import Projects from "./Projects";
 import Education from "./Education";
-export default function Home() {
-  const [activeSection, setActiveSection] = useState("home");
-  const [isVisible, setIsVisible] = useState(false);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const skills = {
-    Frontend: [
-      "React",
-      "Angular",
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Web Components",
-    ],
-    Backend: [
-      "Node.js",
-      "Express",
-      ".NET",
-      "Go",
-      "RESTful APIs",
-      "Microservices",
-    ],
-    Database: ["MongoDB", "MySQL", "PostgreSQL", "Firebase", "Redis"],
-    "Tools & Others": ["Git", "Docker", "AWS", "VS Code", "Postman", "Jira"],
-  };
+import { Link } from "react-router-dom";
 
+export default function Home() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
       <section id="hero-section">
@@ -123,30 +85,46 @@ export default function Home() {
           <div className="relative mb-12">
             <p className="text-base md:text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed backdrop-blur-sm bg-gray-900/30 p-6 rounded-2xl border border-gray-700/50">
               <span className="text-cyan-400 font-semibold">
-                Results-driven Software Engineer
+                Full-Stack Software Engineer
               </span>{" "}
-              with
+              <span className="text-red-400 font-semibold">
+                {" "}
+                with 5+ years of experience
+              </span>{" "}
+              specializing in
               <span className="text-purple-400 font-semibold">
                 {" "}
-                4+ years
+                AI-powered solutions
               </span>{" "}
-              of experience building
+              using
+              <span className="text-yellow-400 font-semibold">
+                {" "}
+                Node.js, React, Microservices
+              </span>
+              , and
               <span className="text-green-400 font-semibold">
                 {" "}
-                scalable web applications
+                Supabase, MongoDB, PGVector
+              </span>
+              . Experienced in building
+              <span className="text-pink-400 font-semibold">
+                {" "}
+                scalable AI microservices
               </span>{" "}
-              and backend services using
-              <span className="text-yellow-400 font-semibold">
-                Node.js, React, and .Net
-              </span>
-              . Passionate about{" "}
-              <span className="text-pink-400 font-semibold">clean code</span>,
+              and
               <span className="text-blue-400 font-semibold">
-                SOLID principles
+                {" "}
+                RAG pipelines
               </span>
-              , and delivering
+              , delivering
               <span className="text-red-400 font-semibold">
-                impactful software solutions
+                {" "}
+                end-to-end software solutions
+              </span>{" "}
+              using modern web technologies like
+              <span className="text-indigo-400 font-semibold">
+                {" "}
+                LangChain and OpenAI
               </span>
               .
             </p>
@@ -154,25 +132,25 @@ export default function Home() {
 
           {/* Neon buttons */}
           <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
-            <button
-              onClick={() => setActiveSection("projects")}
-              className="relative px-6 md:px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full font-semibold overflow-hidden group transition-all duration-300 transform hover:scale-105"
-            >
-              <span className="relative z-10 flex items-center justify-center gap-2">
+            <button className="relative px-6 md:px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full font-semibold overflow-hidden group transition-all duration-300 transform hover:scale-105">
+              <Link
+                to={"/skills"}
+                className="relative z-10 flex items-center justify-center gap-2"
+              >
                 <Code className="w-5 h-5" />
-                View Projects
-              </span>
+                My Skills
+              </Link>
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 blur-xl opacity-50"></div>
             </button>
-            <button
-              onClick={() => setActiveSection("skills")}
-              className="relative px-6 md:px-8 py-4 border-2 border-purple-500 text-purple-400 rounded-full font-semibold overflow-hidden group transition-all duration-300 hover:text-white"
-            >
-              <span className="relative z-10 flex items-center justify-center gap-2">
+            <button className="relative px-6 md:px-8 py-4 border-2 border-purple-500 text-purple-400 rounded-full font-semibold overflow-hidden group transition-all duration-300 hover:text-white">
+              <Link
+                to={"/contact"}
+                className="relative z-10 flex items-center justify-center gap-2"
+              >
                 <Zap className="w-5 h-5" />
-                My Skills
-              </span>
+                Lets Connect
+              </Link>
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
             </button>
           </div>

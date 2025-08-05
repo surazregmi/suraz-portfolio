@@ -1,9 +1,31 @@
-import { useState } from "react";
-import UnderConstruction from "./UnderConstruction";
-import { ExternalLink } from "lucide-react";
-
 export default function Projects() {
   const projects = [
+    {
+      title: "AI powered Project Management Tool (Cognify Ops)",
+      description:
+        "AI powered Project Management tool that answers based on the knowledge base with vector similarity search and RAG pipelines.",
+      tech: [
+        "React.js",
+        "Node.js",
+        "Express",
+        "RESTful APIs",
+        "Typescript",
+        "Prisma ORM",
+        "Supabase",
+        "PGVector",
+        "LangChain",
+        "OpenAI",
+        "Microservices",
+        "AWS SQS",
+        "RAG Pipelines",
+        "JWT",
+        "Yup",
+      ],
+      company: "Capstone Project - Kings own Institute",
+      period: "June 2024 - June 2025",
+      gradient: "from-cyan-400 to-blue-500",
+    },
+
     {
       title: "Oil Commander LIMS",
       description:
@@ -73,7 +95,6 @@ export default function Projects() {
                   >
                     {project.title}
                   </h3>
-                  <ExternalLink className="w-5 md:w-6 h-5 md:h-6 text-gray-400 hover:text-cyan-400 cursor-pointer transition-colors duration-300 flex-shrink-0" />
                 </div>
 
                 <p className="text-gray-300 mb-6 leading-relaxed text-sm md:text-base">

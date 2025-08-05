@@ -8,6 +8,7 @@ import Blogs from "@/pages/Blogs";
 import HomePage from "@/pages/HomePage";
 import Experiances from "@/pages/Experiances";
 import Education from "@/pages/Education";
+import Contact from "@/pages/Contact";
 
 export default function AppRoutes() {
   return (
@@ -20,6 +21,7 @@ export default function AppRoutes() {
           <Route path="education" element={<Education />} />
           <Route path="projects" element={<Projects />} />
           <Route path="blog" element={<Blogs />} />
+          <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
           <Route path="test" element={<HomePage />} />
         </Route>
