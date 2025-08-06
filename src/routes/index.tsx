@@ -9,6 +9,7 @@ import HomePage from "@/pages/HomePage";
 import Experiances from "@/pages/Experiances";
 import Education from "@/pages/Education";
 import Contact from "@/pages/Contact";
+import Resume from "@/components/Resume/Resume";
 
 export default function AppRoutes() {
   return (
@@ -22,6 +23,8 @@ export default function AppRoutes() {
           <Route path="projects" element={<Projects />} />
           <Route path="blog" element={<Blogs />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="resume" element={<Resume />} />
+
           <Route path="*" element={<NotFound />} />
           <Route path="test" element={<HomePage />} />
         </Route>

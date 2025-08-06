@@ -26,6 +26,7 @@ export default function Experiances() {
         "Developed scalable backend services with Node.js and Express",
       ],
     },
+
     {
       title: "Software Engineer",
       company: "Leapfrog Technology Pvt Ltd",
