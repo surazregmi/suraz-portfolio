@@ -13,6 +13,7 @@ export default function Layout() {
     { name: "Projects", to: "/projects" },
     { name: "Education", to: "/education" },
     { name: "Contact", to: "/contact" },
+    { name: "Blogs", to: "/blog" },
   ];
 
   return (
