@@ -4,6 +4,8 @@ import { blogs } from "../data/blogs";
 import ReactMarkdown from "react-markdown";
 import { useEffect, useState } from "react";
 
+import rehypeRaw from "rehype-raw";
+
 export default function BlogPost() {
   const { slug } = useParams();
   const blog = blogs.find((b) => b.slug === slug);
@@ -23,7 +25,7 @@ export default function BlogPost() {
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10 prose prose-invert">
-      <ReactMarkdown>{markdown}</ReactMarkdown>
+      <ReactMarkdown rehypePlugins={[rehypeRaw]}>{markdown}</ReactMarkdown>
     </div>
   );
 }
